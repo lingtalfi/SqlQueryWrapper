@@ -77,6 +77,7 @@ class SqlQueryWrapper implements SqlQueryWrapperInterface
 
         // first the rows query
         $q = $this->sqlQuery->getSqlQuery();
+//        az($q, $markers);
         $rows = QuickPdo::fetchAll($q, $markers);
         if ($this->rowDecorator) {
             foreach ($rows as $k => $row) {
@@ -84,6 +85,7 @@ class SqlQueryWrapper implements SqlQueryWrapperInterface
                 $rows[$k] = $row;
             }
         }
+//        az($rows);
         $this->rows = $rows;
 
 
