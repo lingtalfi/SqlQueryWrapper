@@ -71,6 +71,10 @@ The list pagination, order and filters are provided by the plugins.
 History Log
 ------------------
     
+- 1.1.0 -- 2018-04-17
+
+    - add SqlQueryPluginInterface onQueryReady method
+    
 - 1.0.0 -- 2018-04-17
 
     - initial commit

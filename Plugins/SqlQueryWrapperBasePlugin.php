@@ -22,6 +22,11 @@ abstract class SqlQueryWrapperBasePlugin implements SqlQueryPluginInterface
         return new static();
     }
 
+    public function onQueryReady(SqlQueryInterface $sqlQuery)
+    {
+
+    }
+
     public function prepareQuery(SqlQueryInterface $sqlQuery)
     {
 

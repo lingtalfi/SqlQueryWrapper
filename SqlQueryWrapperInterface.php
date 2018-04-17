@@ -30,6 +30,7 @@ interface SqlQueryWrapperInterface
     /**
      * This method will execute the following 3 steps in order:
      *
+     * - call the plugins onQueryReady method, so that plugins can initialize themselves using the original (not modified) sqlQuery
      * - call the plugins prepareQuery method, so that plugins can interact with the sqlQuery before it's executed
      * - execute the sqlQuery, this yields the items, and the number of items
      * - call the plugins prepareModel method, so that plugins can prepare their model,

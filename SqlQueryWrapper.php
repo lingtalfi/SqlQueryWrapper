@@ -29,7 +29,6 @@ class SqlQueryWrapper implements SqlQueryWrapperInterface
 
     // view
     private $rows;
-    private $models;
 
 
     public function __construct()
@@ -55,6 +54,14 @@ class SqlQueryWrapper implements SqlQueryWrapperInterface
 
     public function prepare()
     {
+
+
+        //--------------------------------------------
+        // READ THE QUERY
+        //--------------------------------------------
+        foreach ($this->plugins as $plugin) {
+            $plugin->onQueryReady($this->sqlQuery);
+        }
 
 
         //--------------------------------------------
