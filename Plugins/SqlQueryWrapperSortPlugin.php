@@ -98,14 +98,27 @@ class SqlQueryWrapperSortPlugin extends SqlQueryWrapperBasePlugin
         return $this;
     }
 
+    public function appendSortItems(array $sortItems)
+    {
+        foreach ($sortItems as $k => $v) {
+            $this->sortItems[$k] = $v;
+        }
+        return $this;
+    }
+
+    public function prependSortItems(array $sortItems)
+    {
+        $curSortItems = $this->sortItems;
+        $this->sortItems = $sortItems;
+        $this->appendSortItems($curSortItems);
+        return $this;
+    }
+
     public function setDefaultSort(string $defaultSort)
     {
         $this->defaultSort = $defaultSort;
         return $this;
     }
-    
-    
-    
 
 
 }
