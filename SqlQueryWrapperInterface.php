@@ -55,6 +55,8 @@ interface SqlQueryWrapperInterface
      */
     public function getPlugin(string $name);
 
+    public function setPlugin(string $name, SqlQueryPluginInterface $plugin);
+
     //--------------------------------------------
     // VIEW METHODS
     //--------------------------------------------
