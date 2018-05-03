@@ -78,13 +78,13 @@ class SqlQueryWrapper implements SqlQueryWrapperInterface
         // first the count query
         $qCount = $this->sqlQuery->getCountSqlQuery();
         $markers = $this->sqlQuery->getMarkers();
-//        az(__FILE__, $qCount);
+//        az(__FILE__, $qCount, $markers);
         $nbItems = QuickPdo::fetch($qCount, $markers, \PDO::FETCH_COLUMN);
 
 
         // first the rows query
         $q = $this->sqlQuery->getSqlQuery();
-//        az($q, $markers);
+//        az(__FILE__, $q, $markers);
         $rows = QuickPdo::fetchAll($q, $markers);
         if ($this->rowDecorator) {
             foreach ($rows as $k => $row) {
