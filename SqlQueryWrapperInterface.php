@@ -62,6 +62,11 @@ interface SqlQueryWrapperInterface
     //--------------------------------------------
     public function getRows();
 
+    /**
+     * @return int, you must call the prepare method first before calling this method.
+     */
+    public function getNumberOfItems();
+
     public function getModel(string $pluginName);
 
 

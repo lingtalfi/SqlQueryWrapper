@@ -30,6 +30,11 @@ class SqlQueryWrapper implements SqlQueryWrapperInterface
     // view
     private $rows;
 
+    /**
+     * This variable is only set once you've called the prepare method.
+     */
+    private $nbItems;
+
 
     public function __construct()
     {
@@ -80,12 +85,14 @@ class SqlQueryWrapper implements SqlQueryWrapperInterface
         $markers = $this->sqlQuery->getMarkers();
 //        az(__FILE__, $qCount, $markers);
         $nbItems = QuickPdo::fetch($qCount, $markers, \PDO::FETCH_COLUMN);
+        $this->nbItems = $nbItems;
 
 
         // first the rows query
         $q = $this->sqlQuery->getSqlQuery();
 //        az(__FILE__, $q, $markers);
         $rows = QuickPdo::fetchAll($q, $markers);
+//        az($rows);
         if ($this->rowDecorator) {
             foreach ($rows as $k => $row) {
                 call_user_func_array($this->rowDecorator, [&$row]);
@@ -122,6 +129,12 @@ class SqlQueryWrapper implements SqlQueryWrapperInterface
     {
         return $this->rows;
     }
+
+    public function getNumberOfItems()
+    {
+        return $this->nbItems;
+    }
+
 
     public function getModel(string $pluginName)
     {

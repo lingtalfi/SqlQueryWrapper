@@ -71,6 +71,10 @@ The list pagination, order and filters are provided by the plugins.
 History Log
 ------------------
     
+- 1.4.0 -- 2018-05-11
+
+    - add SqlQueryWrapperInterface.getNumberOfItems method
+    
 - 1.3.0 -- 2018-05-02
 
     - add SqlQueryWrapperInterface.setPlugin method
