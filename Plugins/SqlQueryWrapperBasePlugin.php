@@ -10,10 +10,12 @@ abstract class SqlQueryWrapperBasePlugin implements SqlQueryPluginInterface
 {
 
     protected $model;
+    protected $context;
 
     public function __construct()
     {
         $this->model = [];
+        $this->context = $_GET;
     }
 
 
@@ -40,6 +42,12 @@ abstract class SqlQueryWrapperBasePlugin implements SqlQueryPluginInterface
     public function getModel(): array
     {
         return $this->model;
+    }
+
+    public function setContext(array $context)
+    {
+        $this->context = $context;
+        return $this;
     }
 
 }
