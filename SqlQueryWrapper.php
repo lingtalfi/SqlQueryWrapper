@@ -132,7 +132,7 @@ class SqlQueryWrapper implements SqlQueryWrapperInterface
 
     public function getNumberOfItems()
     {
-        return $this->nbItems;
+        return (int)$this->nbItems;
     }
 
 
