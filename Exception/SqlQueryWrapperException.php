@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SqlQueryWrapper\Exception;
+namespace Ling\SqlQueryWrapper\Exception;
 
 
 class SqlQueryWrapperException extends \Exception

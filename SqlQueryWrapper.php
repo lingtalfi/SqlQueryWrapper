@@ -1,13 +1,13 @@
 <?php
 
 
-namespace SqlQueryWrapper;
+namespace Ling\SqlQueryWrapper;
 
 
-use QuickPdo\QuickPdo;
-use SqlQuery\SqlQueryInterface;
-use SqlQueryWrapper\Exception\SqlQueryWrapperException;
-use SqlQueryWrapper\Plugins\SqlQueryPluginInterface;
+use Ling\QuickPdo\QuickPdo;
+use Ling\SqlQuery\SqlQueryInterface;
+use Ling\SqlQueryWrapper\Exception\SqlQueryWrapperException;
+use Ling\SqlQueryWrapper\Plugins\SqlQueryPluginInterface;
 
 class SqlQueryWrapper implements SqlQueryWrapperInterface
 {

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace SqlQueryWrapper\Plugins;
+namespace Ling\SqlQueryWrapper\Plugins;
 
 
-use SqlQuery\SqlQueryInterface;
+use Ling\SqlQuery\SqlQueryInterface;
 
 /**
  * This plugin is a little bit tricky.

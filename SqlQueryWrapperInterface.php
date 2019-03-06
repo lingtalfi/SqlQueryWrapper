@@ -1,11 +1,11 @@
 <?php
 
 
-namespace SqlQueryWrapper;
+namespace Ling\SqlQueryWrapper;
 
 
-use SqlQuery\SqlQueryInterface;
-use SqlQueryWrapper\Plugins\SqlQueryPluginInterface;
+use Ling\SqlQuery\SqlQueryInterface;
+use Ling\SqlQueryWrapper\Plugins\SqlQueryPluginInterface;
 
 /**
  * A list is separated between the sqlQuery on the model side, and the list widget on the view side.
